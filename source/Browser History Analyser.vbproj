@@ -1,0 +1,249 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.40607</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FB4556CC-C509-4AC5-8E4A-03B65679D377}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sytel.BrowserHistoryAnalyser.My.MyApplication</StartupObject>
+    <RootNamespace>Sytel.BrowserHistoryAnalyser</RootNamespace>
+    <AssemblyName>Browser History Analyser</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <OptionStrict>On</OptionStrict>
+    <AssemblyKeyProviderName>Microsoft Base Cryptographic Provider v1.0</AssemblyKeyProviderName>
+    <AssemblyOriginatorKeyMode>Container</AssemblyOriginatorKeyMode>
+    <TargetZone>LocalComputer</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/IE History Analyzer</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <FallbackCulture>en-US</FallbackCulture>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <UpdateUrlEnabled>false</UpdateUrlEnabled>
+    <ApplicationVersion>1.0.0.*</ApplicationVersion>
+    <ApplicationRevision>0</ApplicationRevision>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <IncrementalBuild>true</IncrementalBuild>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Browser History Analyser.xml</DocumentationFile>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <IncrementalBuild>false</IncrementalBuild>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>IE History Analyzer.xml</DocumentationFile>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DundasWinChart, Version=3.1.0.1573, Culture=neutral, PublicKeyToken=a4c03dce5db22406">
+      <HintPath>C:\Program Files\Dundas Software\Charting\WinControl\bin\DundasWinChart.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Sytel.Common.WinForms, Version=1.0.1754.25023, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Sytel.Common.WinForms\Sytel.Common.WinForms\bin\Debug\Sytel.Common.WinForms.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form11.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Form1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MostVisitedDomainsPlugin.Designer.vb">
+      <DependentUpon>MostVisitedDomainsPlugin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MostVisitedDomainsPlugin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MostVisitedUrlsPlugin.Designer.vb">
+      <DependentUpon>MostVisitedUrlsPlugin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MostVisitedUrlsPlugin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SearchQueriesPlugin.Designer.vb">
+      <DependentUpon>SearchQueriesPlugin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SearchQueriesPlugin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HistoryData.vb" />
+    <Compile Include="HistoryViewPlugin.Designer.vb">
+      <DependentUpon>HistoryViewPlugin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryViewPlugin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IHistoryViewPlugin.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\MyApplication.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MyApplication.myapp</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\MyResources.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyResources.resx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\MySettings.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MySettings.settings</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\MyEvents.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NoDataPlugin.Designer.vb">
+      <DependentUpon>NoDataPlugin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NoDataPlugin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StatisticsPlugin.Designer.vb">
+      <DependentUpon>StatisticsPlugin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StatisticsPlugin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StatisticsProcessor.vb" />
+    <Compile Include="UsageByDayPlugin.Designer.vb">
+      <DependentUpon>UsageByDayPlugin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsageByDayPlugin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Form11.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="MostVisitedDomainsPlugin.resx">
+      <DependentUpon>MostVisitedDomainsPlugin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostVisitedUrlsPlugin.resx">
+      <DependentUpon>MostVisitedUrlsPlugin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchQueriesPlugin.resx">
+      <DependentUpon>SearchQueriesPlugin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryViewPlugin.resx">
+      <DependentUpon>HistoryViewPlugin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\MyResources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>MyResources.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoDataPlugin.resx">
+      <DependentUpon>NoDataPlugin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatisticsPlugin.resx">
+      <DependentUpon>StatisticsPlugin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsageByDayPlugin.resx">
+      <DependentUpon>UsageByDayPlugin.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\MyApplication.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>MyApplication.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\MySettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MySettings.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="filter.ico" />
+    <Content Include="filter.png" />
+    <Content Include="Resources\history1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperFile Include="Microsoft.Net.Framework.2.0">
+      <InProject>False</InProject>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
