@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+IEHistoryAnalyzer
+</name>
+</assembly>
+<members>
+<member name="P:IE_History_Analyzer.My.Resources.MyResources.ResourceManager">
+	<summary>
+   Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:IE_History_Analyzer.My.Resources.MyResources.Culture">
+	<summary>
+   Overrides the current thread's CurrentUICulture property for all
+   resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:IE_History_Analyzer.My.Resources.Form1.ResourceManager">
+	<summary>
+   Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:IE_History_Analyzer.My.Resources.Form1.Culture">
+	<summary>
+   Overrides the current thread's CurrentUICulture property for all
+   resource lookups using this strongly typed resource class.
+</summary>
+</member>
+</members>
+</doc>
